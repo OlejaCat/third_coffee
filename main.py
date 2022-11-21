@@ -29,7 +29,7 @@ class Coffee(QMainWindow):
                 self.tableWidget.rowCount() + 1)
             for j, elem in enumerate(row):
                 self.tableWidget.setItem(
-                    i, j, QTableWidgetItem(elem))
+                    i, j, QTableWidgetItem(str(elem)))
         self.tableWidget.resizeColumnsToContents()
 
 
