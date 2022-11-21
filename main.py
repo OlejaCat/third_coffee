@@ -3,14 +3,126 @@ import sqlite3
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
-from PyQt5 import uic
+from PyQt5 import QtCore, QtWidgets
 
 
-class Coffee(QMainWindow):
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(690, 555)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
+        self.tableWidget.setGeometry(QtCore.QRect(10, 40, 671, 481))
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(10, 0, 93, 28))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(110, 0, 93, 28))
+        self.pushButton_2.setObjectName("pushButton_2")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 690, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Кофе"))
+        self.pushButton.setText(_translate("MainWindow", "Добавить"))
+        self.pushButton_2.setText(_translate("MainWindow", "Изменить"))
+
+
+class Ui_MainWindow_2(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(362, 386)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.formLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.formLayoutWidget.setGeometry(QtCore.QRect(10, 10, 341, 204))
+        self.formLayoutWidget.setObjectName("formLayoutWidget")
+        self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
+        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.formLayout.setVerticalSpacing(14)
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
+        self.label_2 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.label_3 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.label_4 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_4.setObjectName("label_4")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_4)
+        self.label_5 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_5.setObjectName("label_5")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_5)
+        self.label_6 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_6.setObjectName("label_6")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_6)
+        self.lineEdit = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit)
+        self.comboBox = QtWidgets.QComboBox(self.formLayoutWidget)
+        self.comboBox.setObjectName("comboBox")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.comboBox)
+        self.comboBox_2 = QtWidgets.QComboBox(self.formLayoutWidget)
+        self.comboBox_2.setObjectName("comboBox_2")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.comboBox_2)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
+        self.spinBox_2 = QtWidgets.QSpinBox(self.formLayoutWidget)
+        self.spinBox_2.setObjectName("spinBox_2")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.spinBox_2)
+        self.spinBox = QtWidgets.QSpinBox(self.formLayoutWidget)
+        self.spinBox.setObjectName("spinBox")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.spinBox)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(242, 300, 111, 28))
+        self.pushButton.setObjectName("pushButton")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 362, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "Название сорта"))
+        self.label_2.setText(_translate("MainWindow", "Степень обжарки"))
+        self.label_3.setText(_translate("MainWindow", "Молотый/в зернах"))
+        self.label_4.setText(_translate("MainWindow", "Описание вкуса"))
+        self.label_5.setText(_translate("MainWindow", "Цена(в рублях)"))
+        self.label_6.setText(_translate("MainWindow", "Объем упаковки(в граммах)"))
+        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+
+
+class Coffee(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.con = sqlite3.connect('coffee.sqlite')
-        uic.loadUi('main.ui', self)
+        self.con = sqlite3.connect('data/coffee.sqlite')
+        self.setupUi(self)
 
         self.pushButton.clicked.connect(self.add_coffee)
         self.pushButton_2.clicked.connect(self.edit_coffee)
@@ -51,15 +163,15 @@ class Coffee(QMainWindow):
             prog_2.pushButton.clicked.connect(prog_2.edit)
 
 
-class AddEdit(QMainWindow):
+class AddEdit(QMainWindow, Ui_MainWindow_2):
     def __init__(self):
         super().__init__()
-        self.con = sqlite3.connect('coffee.sqlite')
+        self.con = sqlite3.connect('data/coffee.sqlite')
         self.cur = self.con.cursor()
         self.temp = list()
         self.temp_2 = list()
         self.id = 0
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        self.setupUi(self)
 
         self.spinBox.setMaximum(10000)
         self.spinBox_2.setMaximum(10000)
